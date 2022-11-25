@@ -1,6 +1,6 @@
 import './style.css';
 
-import './10-clipping.js';
+import './01-basic-three.js';
 
 
 
