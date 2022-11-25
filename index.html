@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+  <script type="module" src="main.js">
+
+  </script>
+</head>
+
+
+<body>
+
+  <div>
+    <form name="myForm">
+      请输入想看的序号： <input type="text" name="inputBox">
+      <input type="button" value="点击获取案例" onclick="getInputValue()">
+      <input type="button" value="重置" onclick="reload()">
+    </form>
+    <div class="status"></div>
+  </div>
+
+  <script>
+    function getInputValue() {
+      let inputVal = myForm.inputBox.value;
+      switch (Number(inputVal)) {
+        case (1):
+          import('./01-basic-three.js');
+          break;
+        case (2):
+          import('./02-spot-light-shadow.js');
+          break;
+        case (3):
+          import('./03-helper-gui.js');
+          break;
+        case (4):
+          import('./04-raycast.js');
+          break;
+        case (5):
+          import('./05-oimophysics.js');
+          break;
+        case (6):
+          import('./06-shadow-viewer.js');
+          break;
+        case (7):
+          import('./07-animation.js');
+          break;
+        case (8):
+          import('./08-ani-soldier.js');
+          break;
+        case (9):
+          import('./09-tokyo.js');
+          break;
+        case (10):
+          import('./10-clipping.js');
+          break;
+      }
+    }
+
+    function reload() {
+      location.reload();
+    }
+  </script>
+
+</body>
+
+</html>
